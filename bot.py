@@ -27,10 +27,10 @@ def caps(bot, update, args):
 
 
 def Weather(bot, update, args):
-    NameOfTheCity = args
+    city = args
     appid = "ad90afdfa34918d01559579762da4f03"
     result = requests.get("http://api.openweathermap.org/data/2.5/weather",
-                          params={'q': NameOfTheCity,
+                          params={'q': city,
                                   'type': 'like', 'units': 'metric',
                                   'lang': 'ru', 'APPID': appid})
     data = result.json()
