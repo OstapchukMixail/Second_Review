@@ -13,7 +13,12 @@ logger = logging.getLogger(__name__)
 def start(bot, update):
     """Send a message when the command /start is issued."""
     bot.send_message(chat_id=update.message.chat_id,
-                     text="I'm a bot, please talk to me!")
+                     text="I'm a telegram-bot that "
+                          "shows you the weather in any city!")
+    bot.send_message(chat_id=update.message.chat_id,
+                     text="You can use some commands: \n"
+                          "/caps <arguments> \n"
+                          "/weather <city>")
 
 
 def echo(bot, update):
